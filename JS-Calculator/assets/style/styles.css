@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+input[type="number"], select {
+    padding: 5px;
+    margin-left: 10px;
+    width: 160px;
+}
+
+input[type="text"] {
+    border: none;
+    background-color: #f3f3f3;
+}
+
+button {
+    padding: 5px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
