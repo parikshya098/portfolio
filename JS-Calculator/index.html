@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Parikshya Bhandari">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/style/styles.css">
 </head>
 <body>
-    <div class="calculator">
-        <h1>Javascript Calculator</h1>
-        <form id="calc-form">
-            <div class="form-group">
-                <label for="operand1">Operand 1:</label>
-                <input type="number" step="any" id="operand1" required>
-                <span class="error" id="error-op1">Operand 1 is Required</span>
-            </div>
-            <div class="form-group">
-                <label for="operator">Operator:</label>
-                <select id="operator" required>
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
-                <span class="error" id="error-op">Operator is Required</span>
-            </div>
-            <div class="form-group">
-                <label for="operand2">Operand 2:</label>
-                <input type="number" step="any" id="operand2" required>
-                <span class="error" id="error-op2">Operand 2 is Required</span>
-            </div>
-            <div class="form-group">
-                <label for="result">Result:</label>
-                <input type="text" id="result" readonly>
-            </div>
-            <button type="button" onclick="calculate()">Calculate</button>
-            <button type="button" onclick="clearForm()">Clear</button>
-        </form>
+<form id="calculatorForm">
+    <div class="formcontainer">
+        <h1>JavaScript Calculator</h1>
+        <fieldset id="calculatorDetails">
+            <legend>Calculator</legend>  
+            <br>
+            <label class="formlabel" for="Operand1">Operand 1: </label>
+            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15">
+            <label class="error" for="Operand1" id="Operand1Error"></label>
+            <br><br>
+      
+            <label class="formlabel" for="Operand2">Operand 2: </label>
+            <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15">
+            <label class="error" for="Operand2" id="Operand2Error"></label>
+            <br><br>
+
+            <label class="formlabel">Operator: </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="AddOperator" value="Add">+
+                </label>
+                <label for="SubtractOperator">
+                    <input type="radio" name="Operator" id="SubtractOperator" value="Subtract">-
+                </label>
+                <label for="MultiplyOperator">
+                    <input type="radio" name="Operator" id="MultiplyOperator" value="Multiply">*</label>
+                <label for="DivideOperator">
+                    <input type="radio" name="Operator" id="DivideOperator" value="Divide">/
+                </label>
+            <label for="Operator" class="error" id="OperatorError"></label>
+            <br><br>
+
+            <label class="formlabel">Result: </label>
+            <span id="Result"></span>
+            <br><br>
+
+            <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
+        </fieldset>
     </div>
-    <script src="script.js"></script>
+</form>
+<script src="assets/script/script.js"></script>
 </body>
 </html>

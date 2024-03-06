@@ -1,73 +1,75 @@
 function calculate() {
-    // Hide all error messages
-    document.getElementById('error-op1').style.display = 'none';
-    document.getElementById('error-op').style.display = 'none';
-    document.getElementById('error-op2').style.display = 'none';
+    // Clear any error or output messages
+    document.getElementById("Operand1Error").innerHTML = "";
+    document.getElementById("Operand2Error").innerHTML = "";
+    document.getElementById("Result").innerHTML = "";
 
-    // Get the operand values and operator
-    var operand1 = document.getElementById('operand1').value;
-    var operator = document.getElementById('operator').value;
-    var operand2 = document.getElementById('operand2').value;
-    var result = 0;
+    // Error Flag - True if an error has occurred
+    var errorflag = false;
 
-    // Validate operands and operator
+    // Get operands from form
+    var operand1 = document.getElementById("Operand1").value;
+    var operand2 = document.getElementById("Operand2").value;
+
+    // Check for required operands and if they are numbers
     if (!operand1) {
-        document.getElementById('error-op1').style.display = 'block';
-        return;
-    }
-
-    if (!operator) {
-        document.getElementById('error-op').style.display = 'block';
-        return;
+        document.getElementById("Operand1Error").innerHTML = "Operand 1 is Required";
+        errorflag = true;
+    } else if (isNaN(operand1)) {
+        document.getElementById("Operand1Error").innerHTML = "Operand 1 Must be a Numeric Value";
+        errorflag = true;
     }
 
     if (!operand2) {
-        document.getElementById('error-op2').style.display = 'block';
-        return;
+        document.getElementById("Operand2Error").innerHTML = "Operand 2 is Required";
+        errorflag = true;
+    } else if (isNaN(operand2)) {
+        document.getElementById("Operand2Error").innerHTML = "Operand 2 Must be a Numeric Value";
+        errorflag = true;
     }
 
-    // Parse operands
-    operand1 = parseFloat(operand1);
-    operand2 = parseFloat(operand2);
-
-    // Check for division by zero
-    if (operator === '/' && operand2 === 0) {
-        document.getElementById('result').value = 'Error: Division by zero';
-        return;
+    // Check that an operator is selected
+    var operatorSelected = document.querySelector('input[name="Operator"]:checked');
+    if (!operatorSelected) {
+        document.getElementById("OperatorError").innerHTML = "Operator is Required";
+        errorflag = true;
     }
 
-    // Perform calculation
-    switch (operator) {
-        case '+':
-            result = operand1 + operand2;
-            break;
-        case '-':
-            result = operand1 - operand2;
-            break;
-        case '*':
-            result = operand1 * operand2;
-            break;
-        case '/':
-            result = operand1 / operand2;
-            break;
-        default:
-            result = 'Invalid operator';
-    }
+    // if there is no error, perform the calculations
+    if (!errorflag) {
+        var operand1fp = parseFloat(operand1);
+        var operand2fp = parseFloat(operand2);
+        var result;
+        
+        // Perform calculation based on selected operator
+        switch(operatorSelected.value) {
+            case 'Add':
+                result = operand1fp + operand2fp;
+                break;
+            case 'Subtract':
+                result = operand1fp - operand2fp;
+                break;
+            case 'Multiply':
+                result = operand1fp * operand2fp;
+                break;
+            case 'Divide':
+                if(operand2fp === 0) {
+                    document.getElementById("Operand2Error").innerHTML = "Cannot divide by zero";
+                    return;
+                }
+                result = operand1fp / operand2fp;
+                break;
+        }
 
-    // Display result
-    document.getElementById('result').value = result;
+        // Display result
+        document.getElementById("Result").innerHTML = result.toString();
     }
+}
 
-    function clearForm() {
-        // Clear all inputs
-        document.getElementById('operand1').value = '';
-        document.getElementById('operator').selectedIndex = 0;
-        document.getElementById('operand2').value = '';
-        document.getElementById('result').value = '';
-
-        // Hide all error messages
-        document.getElementById('error-op1').style.display = 'none';
-        document.getElementById('error-op').style.display = 'none';
-        document.getElementById('error-op2').style.display = 'none';
-    }
-    
+function clearform() {
+    document.getElementById("calculatorForm").reset();
+    document.getElementById("Operand1Error").innerHTML = "";
+    document.getElementById("Operand2Error").innerHTML = "";
+    document.getElementById("OperatorError").innerHTML = "";
+    document.getElementById("Result").innerHTML = "";
+}
