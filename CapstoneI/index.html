@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Index Tracker</title>
+    <link rel="stylesheet" href="assets/style/styles.css">
+</head>
+<body>
+    <header style="background-image: url('assets/images/sun.jpg');">
+        <h1>UV Index Tracker</h1>
+        <p>Track UV index levels and protect yourself from sun exposure</p>
+    </header>
+    <main>
+        <section class="location-input">
+            <h2>Enter Your Location</h2>
+            <input type="text" id="location" placeholder="Enter your location">
+            <button id="track-btn">Track UV Index</button>
+        </section>
+        <section class="uv-display">
+            <h2>Current UV Index</h2>
+            <div id="uv-info">
+                <p id="uv-value">UV Index: -</p>
+                <p id="update-time">Last Updated: -</p>
+            </div>
+        </section>
+        <section class="uv-forecast">
+            <h2>UV Index Chart</h2>
+            <canvas id="uv-chart"></canvas>
+        </section>
+        <section class="tips">
+            <h2>Tips for UV Protection</h2>
+            <ul>
+                <li>Apply sunscreen with SPF 30 or higher</li>
+                <li>Wear protective clothing, sunglasses, and a wide-brimmed hat</li>
+                <li>Seek shade, especially during midday hours</li>
+                <li>Avoid tanning beds and prolonged sun exposure</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UV Index Tracker. All rights reserved.</p>
+        <p>Contact: info@example.com</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/script/script.js"></script>
+</body>
+</html>
