@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Parikshya Bhandari - Professional Portfolio</title>
-    <meta name="description" content="Professional Portfolio">
-    <meta name="keywords" content="E-Commerce, HTML, CSS ,JavaScript">
+    <title>Parikshya Bhandari - Portfolio</title>
+    <meta name="description" content="E-Commerce and Information Technology Lectures">
+    <meta name="keywords" content="E-Commerce, HTML, CSS, PHP ,JavaScript">
     <meta name="author" content="Parikshya Bhandari">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- See https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
 <style>
 body {margin:0;font-family:Arial}
 
@@ -116,8 +116,6 @@ body {margin:0;font-family:Arial}
   }
 }
 
-
-
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	/*background-color: #666;*/
@@ -143,14 +141,18 @@ p.shift {
 }	
 
 .img-style-1 {
-	float: left;
-	margin-right: 10px;
-    margin-bottom: 10px;
-	padding: 5px;
-	border: 1px solid #CCC;
-}	
+  width: 145px; 
+  height: auto;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #CCC;
+}
 
-
+#Accomplishments ol li {
+    margin-bottom: 15px; 
+}
 
 </style>
 </head>
@@ -158,103 +160,213 @@ p.shift {
 <div id="container">
     <h1>Portfolio of Parikshya Bhandari</h1>
     <div class="topnav" id="myTopnav">
-        <a class="tablinks" onclick="openTab(event, 'Home')" class="active" id="defaultOpen">Profile</a>
-        <a class="tablinks" onclick="openTab(event, 'Resume')">Resume</a>
-        <a class="tablinks" onclick="openTab(event, 'Skills')">Skills</a>
-        <a class="tablinks" onclick="openTab(event, 'Education')">Education</a>
-        <a class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</a>
-        <a class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</a>
-        <a class="tablinks" onclick="openTab(event, 'Contact')">Contact</a>
-        <div class="dropdown">
-            <button class="dropbtn">Work Examples 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a class="tablinks" onclick="openTab(event, 'Writing')">Writing Examples</a>
-                <a class="tablinks" onclick="openTab(event, 'WebProject')">Web Project</a>
-                <a class="tablinks" onclick="openTab(event, 'Database')">Database</a>
-                <a class="tablinks" onclick="openTab(event, 'Programming')">Programming</a>
-                <a class="tablinks" onclick="openTab(event, 'SoftSkills')">Soft Skills</a>
-                <a class="tablinks" onclick="openTab(event, 'Capstone')">Capstone</a>
-            </div>
-        </div> 
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      <a class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Profile</a>
+      <a class="tablinks" onclick="openTab(event, 'Resume')">Resume</a>
+      <a class="tablinks" onclick="openTab(event, 'Skills')">Skills</a>
+      <a class="tablinks" onclick="openTab(event, 'Education')">Education</a>
+      <a class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</a>
+      <a class="tablinks active" onclick="openTab(event, 'CoverLetter')">Cover Letter</a>
+      <a class="tablinks" onclick="openTab(event, 'Contact')">Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn">Work Examples<i class="fa fa-caret-down"></i> </button>
+        <div class="dropdown-content">
+          <a class="tablinks" onclick="openTab(event, 'Writing')">Writing Examples</a>
+          <a class="tablinks" onclick="openTab(event, 'WebProject')">Web Project</a>
+          <a class="tablinks" onclick="openTab(event, 'Database')">Database</a>
+          <a class="tablinks" onclick="openTab(event, 'Programming')">Programming</a>
+          <a class="tablinks" onclick="openTab(event, 'SoftSkills')">Soft Skills</a>
+          <a class="tablinks" onclick="openTab(event, 'Capstone')">Capstone</a>
+        </div>
+      </div>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
 
     <!-- Begin Home Section -->
     <div id="Home" class="tabcontent">
         <h2>Profile</h2>
+        <p><img class="img-style-1" src="assets/images/Parikshyab.jpg"> Hello, I'm Parikshya Bhandari, a motivated Information Science student with a passion for leveraging technology. 
+          With a strong foundation in HTML, CSS, SQL, and Python, coupled with hands-on experience in research and project management, I bring a unique blend of technical skills and practical knowledge to the table. </p>
+          
+        <p>My career aspiration is to delve into the exciting realm of Data Science and Analytics, where I can apply my expertise to extract actionable insights from data. What sets me apart is not just my technical proficiency, 
+          but also my insatiable curiosity and eagerness to learn, ensuring that I continuously adapt and grow in a dynamic industry.</p>
+        
+        <p>I'm currently seeking internship opportunities where I can further develop my skills and make meaningful contributions to a forward-thinking organization. I'm excited about the possibility of bringing my 
+          enthusiasm and expertise to your team.</p>
+              
     </div>
 
-    <!-- Begin Skills Section -->
+  <!-- Begin Skills Section -->
     <div id="Skills" class="tabcontent">
         <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Linux</li>
+            <li>Experience with Java</li>
+            <li>Experience with APEX Oracle</li>
+            <li>Collaborative Team Player</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+            <li>Interpersonal Skills</li>
+        </ul>
     </div>
 
-    <!-- Begin Education Section -->
+ <!-- Begin Education Section -->
     <div id="Education" class="tabcontent">
         <h2>Education</h2>
+        <h3>High School</h3>
+        <div itemscope itemtype="http://schema.org/EducationalOrganization">
+            <span itemprop="name">Ed-mark Academy</span> - <a itemprop="url" href="https://edmark.edu.np/" title="Ed-mark Academy">https://edmark.edu.np/</a><br>
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Kalanki-14</span>, 
+                <span itemprop="addressRegion">Kathmandu</span>
+                <span itemprop="postalCode">44600</span>  
+                <span itemprop="addressCountry">Nepal</span>
+            </span>
+        </div>
+        <br>
+
+        <h3>Bachelor of Science in Information Science</h3>
+        <div itemscope itemtype="http://schema.org/EducationalOrganization">
+            <span itemprop="name">University of Arkansas at Little Rock</span> - <a itemprop="url" href="https://ualr.edu/" title="University of Arkansas at Little Rock">https://ualr.edu/</a><br>
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">2801 South University Avenue</span>,
+                <span itemprop="addressLocality">Little Rock</span>, 
+                <span itemprop="addressRegion">AR</span> 
+                <span itemprop="postalCode">72204</span> 
+                <span itemprop="addressCountry">U.S.A.</span>
+            </span>
+        </div>
     </div>
 
-    <!-- Begin Accomplishments Section -->
     <div id="Accomplishments" class="tabcontent">
         <h2>Accomplishments</h2>
+        <ol>
+        <li>Virtual Reality Summer Camp - Emerging Analytics Center, UA Little Rock</li>
+        <li>UA Little Rock Chancellor's List - Spring 2022, Fall 2023 </li>
+        <li>UA Little Rock Dean's List - Fall 2022, Spring 2023 </li>
+        <li>Control Box Assembly Project for Boosting Engineering Science and Technology (BEST) Robotics Competition </li>
+        </ol>
     </div>        
   
-    <!-- Begin Skills Section -->
+  <!-- Begin Skills Section -->
     <div id="Resume" class="tabcontent">
         <h2>Resume</h2>
+        <p>You are welcome to download my resume in <a href="assets/resources/Parikshya_Bhandari_Resume.pdf">PDF</a> format.</p>
+        <h2>Career Summary</h2>
+        <p>Result-oriented Information Science student with a proven track record of academic excellence and hands-on experience in IT project management and research. Adept at leveraging technical expertise in HTML, CSS, SQL, and Python to drive innovation and efficiency in diverse settings. Demonstrated ability to manage complex projects, collaborate with cross-functional teams, and deliver results that meet or exceed expectations.</p>
+        <h2>Experience</h2>
+        <div itemscope itemtype="http://schema.org/Organization">
+            <h3><span itemprop="jobTitle">Undergraduate Researcher</span></h3>
+            <h4>
+                <span itemprop="name">Emerging Analytics Center - University of Arkansas at Little Rock</span> - <span itemprop="url"><a href="https://eac-ualr.org/">eac-ualr.org</a></span><br>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">2801 S. University</span>
+                    <span itemprop="addressLocality">Little Rock</span>,
+                    <span itemprop="addressRegion">AR</span>
+                    <span itemprop="postalCode">72204</span>
+                </span>
+            </h4>
+            <p class="time">February 2022 &#45; January 2023</p>
+            <p></p>
+            <p itemprop="description">
+            Served as an Undergraduate Researcher.
+            </p>
     </div>
-    <!-- Begin Coverletter-->
+  
     <div id="CoverLetter" class="tabcontent">
-        <h2>Letter of Introduction</h2>
+      <h2>Letter of Introduction</h2>
+      <p>Dear Sir,</p>
+      <p>I am writing to express my interest in seeking an internship opportunity at your company. With a strong academic background in Information Science and hands-on experience in HTML, CSS, SQL, and Python, I am eager to contribute to your team and further develop my skills in the dynamic field of IT.</p>
+      <p>During my tenure as an undergraduate researcher at the Emerging Analytics Center at UA Little Rock, I had the opportunity to work on cutting-edge projects in virtual reality. This experience, coupled with my perfect GPA and inclusion in the Chancellor's List, has equipped me with the technical skills and academic excellence necessary to excel in a professional setting.</p>
+      <p>My involvement in the Virtual Reality Summer Camp and the Control Box Assembly Project for the BEST Robotics Competition has honed my ability to collaborate effectively with cross-functional teams and deliver results under tight deadlines. I am particularly drawn to your company's commitment to innovation and its reputation for pushing boundaries in the IT industry.</p>
+      <p>I am confident that my passion for Data Science/Data Analytics, coupled with my strong work ethic and enthusiasm for learning, make me a valuable asset to your team. Enclosed is my resume for your review, and I would welcome the opportunity to discuss how my qualifications align with the needs of your company. Please feel free to contact me at <a href="mailto:parikshyabhandari@gmail.com">parikshyabhandari@gmail.com</a> to schedule a convenient time for us to meet.</p>
+      <p>Thank you for considering my application. I look forward to the possibility of contributing to your company's success.</p>
+      <p>Warm regards,<br>
+         Parikshya Bhandari<br>
+         Little Rock, Arkansas 72204<br>
+         parikshyabhandari@gmail.com<br>
+      </p>
+
     </div>
 
-    <!--Begin Contact-->
     <div id="Contact" class="tabcontent">
       <h2>Contact Me</h2>
+      <ul>
+          <li>Email: <a href="mailto:pbhandari1@ualr.edu">pbhandari1@ualr.edu Us</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/parikshyab">www.linkedin.com/in/</a></li>
+      </ul>
     </div>
 
-    <!-- Begin Writing Examples-->
     <div id="Writing" class="tabcontent">
         <h2>Writing Example 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
         <h2>Writing Example 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
     </div>
 
-    <!-- Begin Web Examples -->
     <div id="WebProject" class="tabcontent">
-        <h2><a href="Web-1/index.html">Web Project 1</a></h2>
+        <h2>Web Project 1</h2>
+        <p><a href="Segway/index.html" target="_blank"><img class="img-style-1" src="assets/images/"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
         <h2>Web Project 2</h2>
+        <p><a href="finalproject/index.html" target="_blank"><img class="img-style-1" src="assets/images/" height="143" width="200"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
     </div>
 
-    <!-- Begin Database Examples -->
     <div id="Database" class="tabcontent">
         <h2>Database Project 1</h2>
+        <p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRR-5DOg7alCfdePtxrlwX78izVEqyiVNauAJOlBerQQmZMumwOIGhKbp00Zh8h94eXALYB6hDb_wl1/pubhtml" target="_blank"><img class="img-style-1" src="assets/images/" height="143" width="200"></a><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRR-5DOg7alCfdePtxrlwX78izVEqyiVNauAJOlBerQQmZMumwOIGhKbp00Zh8h94eXALYB6hDb_wl1/pubhtml">Schools Spreadsheet</a>. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
         <h2>Database Project 2</h2>
+        <p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT0xHgbYtmKWxG4LDudZNqu4NRMZQELvxVqAI5gU3MRFl6_7PquxBrh2M3Zzc2xHP7xJyLPZmLkBmtl/pubhtml" target="_blank"><img class="img-style-1" src="assets/images/" height="143" width="200"></a><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT0xHgbYtmKWxG4LDudZNqu4NRMZQELvxVqAI5gU3MRFl6_7PquxBrh2M3Zzc2xHP7xJyLPZmLkBmtl/pubhtml">Jewelry Spreadsheet</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
     </div>
 
-    <!-- Begin Programming Examples -->
     <div id="Programming" class="tabcontent">
-        <h2><a href="JS-Calculator/index.html">Programming Project 1</a></h2>
-        <h2><a href="Cvh/index.html">Programming Project 2</a></h2>
+        <h2>Programming Project 1</h2>
+        <p><a href="hints.html" target="_blank"><img class="img-style-1" src="assets/images/" height="110" width="200"></a><a href="hints.html">AJAX Example</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
+        <h2>Programming Project 2</h2>
+        <p><a href="required.html" target="_blank"><img class="img-style-1" src="assets/images/" height="150" width="200"></a><a href="required.html">Form Validation Example</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
     </div>
 
-    <!-- Begin Soft Skills -->
     <div id="SoftSkills" class="tabcontent">
         <h2>Soft Skills Project 1</h2>
+        <p><img class="img-style-1" src="assets/images/" height="100" width="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
         <h2>Soft Skills Project 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
     </div>
 
-    <!-- Begin Capstone Project -->
     <div id="Capstone" class="tabcontent">
-      <h2><a href="CapstoneI/index.html">Capstone I</a></h2>
+        <h2>Capstone Project</h2>
+        <a href="http://gannmuseum.com" target="_blank"><img class="img-style-1" src="assets/images/" height="400" width="700"></a>
+        <p><a href="http://gannmuseum.com" target="_blank">Gann Museum</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur sit amet lectus ut hendrerit. Aenean malesuada sed dolor ac interdum. Nulla ornare convallis nisl, nec volutpat lectus facilisis eget. Etiam et dignissim ante. Aliquam erat volutpat. Donec sollicitudin malesuada augue, non dignissim ligula vestibulum eget. Etiam tristique nisi dignissim turpis fringilla pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum pharetra tellus vitae dignissim. Nunc sollicitudin arcu vel nulla egestas egestas. Donec ac magna eget elit semper finibus. Fusce libero mi, tempor vel tempus et, sodales convallis dui. Duis a placerat nulla, vitae maximus eros.</p>
+        <br>
     </div>
 </div>
-
 <script>
-/* Click the default tab so that the profile is displayed */
+
 document.getElementById("defaultOpen").click();
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -265,19 +377,6 @@ function myFunction() {
   }
 }
 
-function openTab(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
 </script>
 </body>
 </html>
