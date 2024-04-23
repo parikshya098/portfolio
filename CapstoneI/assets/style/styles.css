@@ -62,13 +62,80 @@ section h2 {
     cursor: pointer;
 }
 
+.location-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.location-input input[type="date"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .uv-info p {
     margin-bottom: 5px;
 }
 
-.uv-forecast canvas {
-    width: 100%;
+/* Set a fixed height for the chart container */
+.uv-forecast {
+    height: 400px; /* Adjust this value to make the chart smaller */
 }
+
+/* Ensure the canvas size is responsive within the container */
+.uv-forecast canvas {
+    max-width: 100%;
+    /* height: auto; Remove if maintainAspectRatio is true */
+}
+
+.user-feedback {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.user-feedback h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.user-feedback form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.user-feedback label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.user-feedback input[type="text"],
+.user-feedback input[type="email"],
+.user-feedback textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-feedback button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Add some hover effects for buttons */
+.user-feedback button:hover {
+    background-color: #0056b3;
+}
+
+
+
 
 footer {
     background-color: #333;
