@@ -84,35 +84,21 @@
     <script src="assets/script/script.js"></script>
     <script>
         // Updated Dummy data for UV Index Chart with Color-Coded Indicators
+        // Example of updated uvData with hourly data points (dummy data)
         const uvData = {
-            labels: ['05/1', '05/2', '05/3', '05/4', '05/5', '05/6', '05/7'],
+            labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], // Hourly labels for one day
             datasets: [{
                 label: 'UV Index',
-                backgroundColor: [
-                    'rgba(255, 255, 0, 0.2)', // Yellow for moderate risk
-                    'rgba(255, 165, 0, 0.2)', // Orange for high risk
-                    'rgba(255, 69, 0, 0.2)',  // Red for very high risk
-                    'rgba(128, 0, 128, 0.2)', // Purple for extreme risk
-                    'rgba(255, 69, 0, 0.2)',  // Red for very high risk
-                    'rgba(255, 165, 0, 0.2)', // Orange for high risk
-                    'rgba(255, 255, 0, 0.2)'  // Yellow for moderate risk
-                ],
-                borderColor: [
-                    'rgba(255, 255, 0, 1)',
-                    'rgba(255, 165, 0, 1)',
-                    'rgba(255, 69, 0, 1)',
-                    'rgba(128, 0, 128, 1)',
-                    'rgba(255, 69, 0, 1)',
-                    'rgba(255, 165, 0, 1)',
-                    'rgba(255, 255, 0, 1)'
-                ],
+                backgroundColor: 'rgba(255, 165, 0, 0.2)', // Use a single color for simplicity or create an array for color-coding each hour
+                borderColor: 'rgba(255, 165, 0, 1)',
                 pointStyle: 'circle',
                 pointRadius: 5,
                 pointHoverRadius: 5,
-                data: [4, 5, 7, 9, 8, 5, 4],
+                data: [0, 0, 0, 0, 0, 0, 1, 2, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 1, 0, 0, 0, 0, 0], // Hourly UV Index data points for one day
             }]
         };
 
+        // Update the config object to reflect the new data
         const config = {
             type: 'line',
             data: uvData,
@@ -123,6 +109,12 @@
                     y: {
                         beginAtZero: true,
                         suggestedMax: 11
+                    },
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'hour'
+                        }
                     }
                 },
                 plugins: {
@@ -133,11 +125,9 @@
                         enabled: true,
                         callbacks: {
                             title: function(context) {
-                                // Return the label for the hovered index
                                 return context[0].label;
                             },
                             label: function(context) {
-                                // Return the custom label with UV Index and risk level
                                 let uvIndex = context.parsed.y;
                                 let riskLevel = '';
                                 if (uvIndex >= 0 && uvIndex <= 2) {
@@ -193,6 +183,7 @@
             }
         };
 
+        // Initialize the chart with the updated configuration
         const uvChart = new Chart(
             document.getElementById('uv-chart'),
             config
